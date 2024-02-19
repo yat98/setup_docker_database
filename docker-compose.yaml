@@ -5,6 +5,7 @@ services:
   mysql:
     container_name: mysql
     image: mysql:latest
+    command: '--lower_case_table_names=0'
     restart: on-failure
     volumes:
       - ./mysql:/var/lib/mysql
